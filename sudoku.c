@@ -58,7 +58,7 @@ int is_valid(Node* n)
     if(n->sudo[0][j] == aux)
       return 0;
   }
-    return 1;
+    return 0;
 }
 
 
