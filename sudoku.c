@@ -58,7 +58,7 @@ int is_valid(Node* n)
     if(n->sudo[0][j] == aux)
       return 0;
   }
-
+  /*
   int subMatriz = 0;
   while(subMatriz < 9)
   {
@@ -77,7 +77,7 @@ int is_valid(Node* n)
       if(p%3 == 2) printf("\n");
     }
     subMatriz++;
-  }
+  }*/
     return 1;
 }
 
