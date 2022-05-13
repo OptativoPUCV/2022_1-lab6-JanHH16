@@ -64,7 +64,7 @@ int is_valid(Node* n)
     {
       if(comprobarColumnas[n->sudo[i][j]] != 0)
         return 0;
-      if(comprobarColumnas[n->sudo[i][j]] == 0 && n.sudo[i][j] != 0)
+      if(comprobarColumnas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
         comprobarColumnas[n->sudo[i][j]] = 1;
     }
     

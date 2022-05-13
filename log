@@ -107,3 +107,9 @@ sudoku.c:67:52: error: 'n' is a pointer; did you mean to use '->'?
                                                     ->
 Compilation failed
 0ff189f
+vi., 13 de may. de 2022 17:31:21: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+a067182
