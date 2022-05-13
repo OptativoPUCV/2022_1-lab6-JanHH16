@@ -136,3 +136,9 @@ sudoku.c:75:9: error: unused variable 'k' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 5c40d80
+vi., 13 de may. de 2022 17:40:08: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  2|4
+total_score: 15/70
+d1c2703

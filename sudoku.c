@@ -75,8 +75,8 @@ int is_valid(Node* n)
     int k = subMatriz;
     for(int p = 0 ; p < 9 ; p++)
     {
-      int i = 3*(subMatriz/3) + (p/3);
-      int j = 3*(subMatriz%3) + (p%3);
+      int i = 3*(k/3) + (p/3);
+      int j = 3*(k%3) + (p%3);
       if(comprobarSM[n->sudo[i][j]] != 0)
         return 0;
       if(comprobarSM[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
