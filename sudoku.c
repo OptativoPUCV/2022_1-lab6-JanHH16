@@ -68,7 +68,7 @@ int is_valid(Node* n)
       int j = 3*(subMatriz%3) + (p%3);
       if(p == 0)
         aux = n->sudo[i][j];
-      else
+      if(p == 1)
       {
         if(n->sudo[i][j] == aux)
           return 0;
