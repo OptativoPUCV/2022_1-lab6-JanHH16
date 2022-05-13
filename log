@@ -61,3 +61,14 @@ vi., 13 de may. de 2022 17:03:06:
  tests:  3|4
 total_score: 20/70
 b9c25f4
+vi., 13 de may. de 2022 17:11:08: 
+ sudoku.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:73:9: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+         if(comprobar[aux] = 1)
+         ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+249b387

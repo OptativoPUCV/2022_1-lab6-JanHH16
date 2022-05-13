@@ -58,7 +58,8 @@ int is_valid(Node* n)
     if(n->sudo[0][j] == aux)
       return 0;
   }
-  /*
+  
+  int comprobar[10] = {0};
   int subMatriz = 0;
   while(subMatriz < 9)
   {
@@ -66,6 +67,16 @@ int is_valid(Node* n)
     {
       int i = 3*(subMatriz/3) + (p/3);
       int j = 3*(subMatriz%3) + (p%3);
+      aux = n->sudo[i][j];
+      if(aux != 0)
+      {
+        if(comprobar[aux] = 1)
+        return 0;
+        else  
+          comprobar[aux] = 1;
+      }
+        
+      /*
       if(p == 0)
         aux = n->sudo[i][j];
       if(p == 1)
@@ -73,11 +84,12 @@ int is_valid(Node* n)
         if(n->sudo[i][j] == aux)
           return 0;
       }
+      */
       printf("%d ",n->sudo[i][j]);
       if(p%3 == 2) printf("\n");
     }
     subMatriz++;
-  }*/
+  }
     return 1;
 }
 
