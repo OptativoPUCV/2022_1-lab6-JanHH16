@@ -72,3 +72,9 @@ sudoku.c:73:9: error: suggest parentheses around assignment used as truth value 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 249b387
+vi., 13 de may. de 2022 17:11:19: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+34a9e49

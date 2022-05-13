@@ -70,7 +70,7 @@ int is_valid(Node* n)
       aux = n->sudo[i][j];
       if(aux != 0)
       {
-        if(comprobar[aux] = 1)
+        if(comprobar[aux] == 1)
         return 0;
         else  
           comprobar[aux] = 1;
