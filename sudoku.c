@@ -45,6 +45,32 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
+  for(int i = 0 ; i < 9 ; i++)
+  {
+    int comporbarFilas[10] = {0};
+    for(int j = 0 ; i < 9 ; j++)
+    {
+      if(comporbarFilas[n->sudo[i][j]])
+        return 0;
+      if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        comporbarFilas[n->sudo[i][j]] = 1;
+    }
+  }
+
+  for(int j = 0 ; j < 9 ; j++)
+  {
+    int comprobarColumnas[10] = {0};
+    for(int i = 0 ; i < 9 ; i++)
+    {
+      if(comprobarColumnas[n->sudo[i][j]] != 0)
+        return 0;
+      if(comprobarColumnas[n->sudo[i][j]] == 0 && n.sudo[i][j] != 0)
+        comprobarColumnas[n->sudo[i][j]] = 1;
+    }
+    
+  }
+  
+/*
   int aux = n->sudo[0][0];
   // Filas
   for(int i = 1 ; i < 9 ; i++)
@@ -58,7 +84,7 @@ int is_valid(Node* n)
     if(n->sudo[0][j] == aux)
       return 0;
   }
-  
+*/
   
   int subMatriz = 0;
   while(subMatriz < 10)

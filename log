@@ -96,3 +96,14 @@ vi., 13 de may. de 2022 17:21:52:
  tests:  3|4
 total_score: 20/70
 e49c4d3
+vi., 13 de may. de 2022 17:31:06: 
+ sudoku.c | 28 +++++++++++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:67:52: error: 'n' is a pointer; did you mean to use '->'?
+       if(comprobarColumnas[n->sudo[i][j]] == 0 && n.sudo[i][j] != 0)
+                                                    ^
+                                                    ->
+Compilation failed
+0ff189f
