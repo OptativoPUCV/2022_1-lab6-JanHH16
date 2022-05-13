@@ -43,8 +43,21 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
-
+int is_valid(Node* n)
+{
+  int aux = n->sudo[0][0];
+  // Filas
+  for(int i = 1 ; i < 9 ; i++)
+  {
+    if(n->sudo[i][0] == aux)
+      return 0;
+  }
+  // Columnas
+  for(int j = 1 ; j < 9 ; j++)
+  {
+    if(n->sudo[0][j] == aux)
+      return 0;
+  }
     return 1;
 }
 
