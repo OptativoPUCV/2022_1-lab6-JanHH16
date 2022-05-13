@@ -13,3 +13,9 @@ list.h:23:6: note: expected 'void *' but argument is of type 'int'
 cc1.exe: all warnings being treated as errors
 Compilation failed
 dc31009
+vi., 13 de may. de 2022 16:45:29: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|4
+total_score: 15/70
+0a89df1

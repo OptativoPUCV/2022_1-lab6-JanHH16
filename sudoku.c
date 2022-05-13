@@ -64,7 +64,7 @@ List* get_adj_nodes(Node* n)
           {
             nodo = copy(n);
             nodo->sudo[i][j] = numeroColocar;
-            pushBack(list,numeroColocar);
+            pushBack(list,nodo);
             numeroColocar++;
           }
         }
