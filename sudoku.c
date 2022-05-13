@@ -48,7 +48,7 @@ int is_valid(Node* n)
   for(int i = 0 ; i < 9 ; i++)
   {
     int comporbarFilas[10] = {0};
-    for(int z = 0 ; z <= 10 ; z++)
+    for(int z = 0 ; z < 10 ; z++)
     {
       printf("%d ", comporbarFilas[z]);
     }
