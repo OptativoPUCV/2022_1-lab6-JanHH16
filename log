@@ -125,3 +125,14 @@ vi., 13 de may. de 2022 17:35:11:
  tests:  2|4
 total_score: 15/70
 3c2a4c6
+vi., 13 de may. de 2022 17:39:52: 
+ sudoku.c | 21 +++++++++++++++++----
+ 1 file changed, 17 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:75:9: error: unused variable 'k' [-Werror=unused-variable]
+     int k = subMatriz;
+         ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+5c40d80

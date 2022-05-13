@@ -62,15 +62,28 @@ int is_valid(Node* n)
     int comprobarColumnas[10] = {0};
     for(int i = 0 ; i < 9 ; i++)
     {
-      if(comprobarColumnas[n->sudo[i][j]])
+      if(comprobarColumnas[n->sudo[i][j]] != 0)
         return 0;
       if(comprobarColumnas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
         comprobarColumnas[n->sudo[i][j]] = 1;
     }
     
   }
-  
-  
+  for(int subMatriz = 0 ; subMatriz < 9 ; subMatriz++)
+  {
+    int comprobarSM[10] = {0};
+    int k = subMatriz;
+    for(int p = 0 ; p < 9 ; p++)
+    {
+      int i = 3*(subMatriz/3) + (p/3);
+      int j = 3*(subMatriz%3) + (p%3);
+      if(comprobarSM[n->sudo[i][j]] != 0)
+        return 0;
+      if(comprobarSM[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        comprobarSM[n->sudo[i][j]] = 1;
+    }
+  }
+  /*
   int subMatriz = 0;
   while(subMatriz < 10)
   {
@@ -88,7 +101,7 @@ int is_valid(Node* n)
       //if(p%3 == 2) printf("\n");
     }
     subMatriz++;
-  }
+  }*/
     return 1;
 }
 
