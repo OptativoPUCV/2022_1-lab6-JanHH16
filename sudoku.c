@@ -68,15 +68,17 @@ int is_valid(Node* n)
     {
       int i = 3*(subMatriz/3) + (p/3);
       int j = 3*(subMatriz%3) + (p%3);
-      aux = n->sudo[i][j];
-      if(aux != 0)
+      //aux = n->sudo[i][j];
+      if(comprobar[n->sudo[i][j]] != 0)
       {
-        if(comprobar[aux] == 1)
-          return 0;
-        else  
-          comprobar[aux] = 1;
+        return 0;
+        //if(comprobar[aux] == 1)
+        //  return 0;
+        //else  
+          //comprobar[aux] = 1;
       }
-        
+      if(comprobar[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        comprobar[n->sudo[i][j]] = 1;
       /*
       if(p == 0)
         aux = n->sudo[i][j];
