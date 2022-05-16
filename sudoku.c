@@ -54,11 +54,11 @@ int is_valid(Node* n)
     }
     for(int j = 0 ; i < 9 ; j++)
     {
-      if(comporbarFilas[n->sudo[i][j]] == 1)
+      if(comporbarFilas[n->sudo[i][j]] == 10)
         return 0;
 
       if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-        comporbarFilas[n->sudo[i][j]] = 1;
+        comporbarFilas[n->sudo[i][j]] = 10;
     }
   }
 /*
