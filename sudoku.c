@@ -51,7 +51,7 @@ int is_valid(Node* n)
     for(int j = 0 ; i < 9 ; j++)
     {
       if(comporbarFilas[n->sudo[i][j]] == 1)
-        return 0;
+        return 1;
       if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
         comporbarFilas[n->sudo[i][j]] = 1;
     }
@@ -63,7 +63,7 @@ int is_valid(Node* n)
     for(int i = 0 ; i < 9 ; i++)
     {
       if(comprobarColumnas[n->sudo[i][j]] == 1)
-        return 0;
+        return 1;
       if(comprobarColumnas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
         comprobarColumnas[n->sudo[i][j]] = 1;
     }
@@ -78,7 +78,7 @@ int is_valid(Node* n)
       int i = 3*(k/3) + (p/3);
       int j = 3*(k%3) + (p%3);
       if(comprobarSM[n->sudo[i][j]] == 1)
-        return 0;
+        return 1;
       if(comprobarSM[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
         comprobarSM[n->sudo[i][j]] = 1;
     }
