@@ -47,8 +47,11 @@ int is_valid(Node* n)
 {
   for(int i = 0 ; i < 9 ; i++)
   {
-    int comporbarFilas[10] = {0};
-
+    int comporbarFilas[10];
+    for(int i = 0 ; i < 10 ; i++)
+    {
+      comporbarFilas[i] = 0;
+    }
     for(int j = 0 ; i < 9 ; j++)
     {
       if(comporbarFilas[n->sudo[i][j]] == 1)
@@ -146,7 +149,7 @@ Node* DFS(Node* initial, int* cont)
       listAux = next(adjList);
     }
     free(aux);
-    (*cont++);
+    *cont++;
   }
   return NULL;
 }
