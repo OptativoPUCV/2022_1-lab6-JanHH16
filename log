@@ -300,3 +300,14 @@ sudoku.c:59:9: error: unused variable 'comporbarFilas' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 cc7f9eb
+do., 15 de may. de 2022 22:38:56: 
+ sudoku.c | 37 +++++++++++++++++++++++++------------
+ 1 file changed, 25 insertions(+), 12 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:56:7: error: unused variable 'aux' [-Werror=unused-variable]
+   int aux;
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+829901d
