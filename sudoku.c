@@ -62,10 +62,10 @@ int is_valid(Node* n)
       //  return 0;
 
       if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-        comporbarFilas[n->sudo[i][j]] = 10;
+        comporbarFilas[n->sudo[i][j]] = 1;
       else
       {
-        if(comporbarFilas[n->sudo[i][j]] == 10 && n->sudo[i][j] != 0)
+        if(comporbarFilas[n->sudo[i][j]] == 1 && n->sudo[i][j] != 0)
           return 0;
       }
     }
