@@ -53,7 +53,6 @@ int is_valid(Node* n)
     }
     printf("\n");
   }
-  int aux;
   for(int i = 0 ; i < 9 ; i++)
   {
     int comporbarFilas[10] ={0};
