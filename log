@@ -277,3 +277,9 @@ sudoku.c:52:7: error: implicit declaration of function 'pritf' [-Werror=implicit
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c7b8496
+do., 15 de may. de 2022 22:20:32: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|3
+total_score: 30/70
+8c349d3
