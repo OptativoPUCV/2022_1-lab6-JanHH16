@@ -45,7 +45,8 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-  for(int i = 0 ; i < 9 ; i++){
+  for(int i = 0 ; i < 9 ; i++)
+  {
     int *validarF = calloc(10,sizeof(int));
     for(int j = 0 ; j < 9 ; j++)
     {
@@ -55,7 +56,8 @@ int is_valid(Node* n)
         validarF[n->sudo[i][j]] = 1;
     }
   }
-  for(int j = 0 ; j < 9 ; j++){
+  for(int j = 0 ; j < 9 ; j++)
+  {
     int *validarC = calloc(10,sizeof(int));
     for(int i = 0 ; i < 9 ; i++)
     {
@@ -80,70 +82,6 @@ int is_valid(Node* n)
     }
   }
   return 1;
-  /*
-  for(int i = 0 ; i < 9 ; i++)
-  {
-    for (int j = 0; j < 9; j++)
-    {
-      printf("%d ", n->sudo[i][j]);
-    }
-    printf("\n");
-  }
-  for(int i = 0 ; i < 9 ; i++)
-  {
-    int comporbarFilas[10] ={0};
-    for(int j = 0 ; i < 9 ; j++)
-    {
-      //if(comporbarFilas[n->sudo[i][j]] == 10)
-      //  return 0;
-
-      if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-        comporbarFilas[n->sudo[i][j]] = 1;
-      else
-      {
-        if(comporbarFilas[n->sudo[i][j]] == 1 && n->sudo[i][j] != 0)
-          return 0;
-      }
-    }
-  }
-
-  for(int j = 0 ; j < 9 ; j++)
-  {
-    int comprobarColumnas[10] = {0};
-    for(int i = 0 ; i < 9 ; i++)
-    {
-      //if(comprobarColumnas[n->sudo[i][j]] == 1)
-      //  return 1;
-      if(comprobarColumnas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-        comprobarColumnas[n->sudo[i][j]] = 1;
-        else
-      {
-        if(comprobarColumnas[n->sudo[i][j]] == 1 && n->sudo[i][j] != 0)
-        return 0;
-      }
-    }
-    
-  }
-  for(int subMatriz = 0 ; subMatriz < 9 ; subMatriz++)
-  {
-    int comprobarSM[10] = {0};
-    int k = subMatriz;
-    for(int p = 0 ; p < 9 ; p++)
-    {
-      int i = 3*(k/3) + (p/3);
-      int j = 3*(k%3) + (p%3);
-      //if(comprobarSM[n->sudo[i][j]] == 1)
-      //  return 1;
-      if(comprobarSM[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-        comprobarSM[n->sudo[i][j]] = 1;
-      else
-      {
-        if(comprobarSM[n->sudo[i][j]] == 1 && n->sudo[i][j] != 0)
-          return 0;
-      } 
-    }
-  }
-  */
 }
 
 
