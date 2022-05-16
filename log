@@ -226,3 +226,14 @@ do., 15 de may. de 2022 22:05:18:
  tests:  3|3
 total_score: 25/70
 a1ec8d2
+do., 15 de may. de 2022 22:08:31: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:149:6: error: value computed is not used [-Werror=unused-value]
+     (*cont++);
+     ~^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c0fca0f
