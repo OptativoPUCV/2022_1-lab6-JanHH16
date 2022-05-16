@@ -89,7 +89,7 @@ int is_valid(Node* n)
 
 List* get_adj_nodes(Node* n)
 {
-    List* list=createList();
+    List* list = createList();
     int numeroColocar = 1;
     for(int i = 0 ; i < 9 ; i++)
     {
@@ -126,7 +126,25 @@ int is_final(Node* n)
     return 1;
 }
 
-Node* DFS(Node* initial, int* cont){
+Node* DFS(Node* initial, int* cont)
+{
+  Stack *S = createStack();
+  push(S,initial);
+  while(get_size(S) != 0)
+  {
+    Node *aux = top(S);
+    pop(S);
+    if(is_final(aux)) return aux;
+    List* adjList = get_adj_nodes(aux);
+    Node *listAux = first(adjList);
+    while (listAux)
+    {
+      push(S,listAux);
+      listAux = next(adjList);
+    }
+    free(aux);
+    cont++;
+  }
   return NULL;
 }
 
