@@ -45,6 +45,42 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
+  for(int i = 0 ; i < 9 ; i++){
+    int *validarF = calloc(10,sizeof(int));
+    for(int j = 0 ; j < 9 ; j++)
+    {
+      if(validarF[n->sudo[i][j]])
+        return 0;
+      if(validarF[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        validarF[n->sudo[i][j]] = 1;
+    }
+  }
+  for(int j = 0 ; j < 9 ; j++){
+    int *validarC = calloc(10,sizeof(int));
+    for(int i = 0 ; i < 9 ; i++)
+    {
+      if(validarC[n->sudo[i][j]])
+        return 0;
+      if(validarC[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        validarC[n->sudo[i][j]] = 1;
+    }
+  }
+  for(int subMatriz = 0 ; subMatriz < 9 ; subMatriz++)
+  {
+    int *validarSM = calloc(10,sizeof(int));
+    int k = subMatriz;
+    int p;
+    for(p = 0 ; p < 9 ; p++){
+      int i=3*(k/3) + (p/3);
+      int j=3*(k%3) + (p%3);
+      if(validarSM[n->sudo[i][j]])
+        return 0;
+      if(validarSM[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        validarSM[n->sudo[i][j]] = 1;
+    }
+  }
+  return 1;
+  /*
   for(int i = 0 ; i < 9 ; i++)
   {
     for (int j = 0; j < 9; j++)
@@ -107,8 +143,7 @@ int is_valid(Node* n)
       } 
     }
   }
-  
-    return 1;
+  */
 }
 
 
