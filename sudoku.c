@@ -162,7 +162,7 @@ List* get_adj_nodes(Node* n)
           {
             nodo = copy(n);
             nodo->sudo[i][j] = numeroColocar;
-            //if(is_valid(nodo))
+            if(is_valid(nodo))
             pushBack(list,nodo);
             numeroColocar++;
           }
