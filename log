@@ -266,3 +266,14 @@ do., 15 de may. de 2022 22:17:27:
  tests:  4|3
 total_score: 30/70
 4f69524
+do., 15 de may. de 2022 22:20:15: 
+ sudoku.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:52:7: error: implicit declaration of function 'pritf' [-Werror=implicit-function-declaration]
+       pritf("%d ", n->sudo[i][j]);
+       ^~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+c7b8496

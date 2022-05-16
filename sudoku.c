@@ -47,6 +47,14 @@ int is_valid(Node* n)
 {
   for(int i = 0 ; i < 9 ; i++)
   {
+    for (int j = 0; j < 9; j++)
+    {
+      pritf("%d ", n->sudo[i][j]);
+    }
+    printf("\n");
+  }
+  for(int i = 0 ; i < 9 ; i++)
+  {
     int comporbarFilas[10];
     for(int i = 0 ; i < 10 ; i++)
     {
