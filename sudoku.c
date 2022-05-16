@@ -53,20 +53,19 @@ int is_valid(Node* n)
     }
     printf("\n");
   }
+  int aux;
   for(int i = 0 ; i < 9 ; i++)
   {
-    int comporbarFilas[10];
-    for(int i = 0 ; i < 10 ; i++)
+    int comporbarFilas[10] ={0};
+    aux = n->sudo[i][0];
+    for(int j = 1 ; i < 9 ; j++)
     {
-      comporbarFilas[i] = 0;
-    }
-    for(int j = 0 ; i < 9 ; j++)
-    {
-      if(comporbarFilas[n->sudo[i][j]] == 10)
+      //if(comporbarFilas[n->sudo[i][j]] == 10)
+      if(aux == n->sudo[i][j])
         return 0;
 
-      if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
-        comporbarFilas[n->sudo[i][j]] = 10;
+      //if(comporbarFilas[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0)
+        //comporbarFilas[n->sudo[i][j]] = 10;
     }
   }
 /*
