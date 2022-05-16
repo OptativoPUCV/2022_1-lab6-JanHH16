@@ -48,6 +48,7 @@ int is_valid(Node* n)
   for(int i = 0 ; i < 9 ; i++)
   {
     int comporbarFilas[10] = {0};
+
     for(int j = 0 ; i < 9 ; j++)
     {
       if(comporbarFilas[n->sudo[i][j]] == 1)
@@ -57,7 +58,7 @@ int is_valid(Node* n)
         comporbarFilas[n->sudo[i][j]] = 1;
     }
   }
-
+/*
   for(int j = 0 ; j < 9 ; j++)
   {
     int comprobarColumnas[10] = {0};
@@ -84,6 +85,7 @@ int is_valid(Node* n)
         comprobarSM[n->sudo[i][j]] = 1;
     }
   }
+  */
     return 1;
 }
 
